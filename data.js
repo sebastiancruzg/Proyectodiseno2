@@ -6,5 +6,7 @@ async function getData (){
     document.getElementById("Latitud").innerText=data.Latitude;
     document.getElementById("Longitud").innerText=data.Longitude;
     document.getElementById("Date").innerText=data.Date;
+
+    
 }
 setInterval(getData,3000);
