@@ -1,9 +1,9 @@
 
 <?php   
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "db-ta";
+$username = "std";
+$password = "uwugang64";
 $dbname = "trackerapp";
 
 // Create connection
