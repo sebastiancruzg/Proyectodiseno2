@@ -38,7 +38,7 @@ $arr=json_decode(ob_get_clean());
 
     <div id="map"></div>
 
-<script src="/TheTrackerApp/data.js">
+<script src="/var/www/html/data.js">
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHDHGpcsDEOlqBbnL1BkZlL2Tfpu8XVuM&callback=iniciarMap">    

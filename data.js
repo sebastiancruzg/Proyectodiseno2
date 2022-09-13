@@ -8,7 +8,7 @@ var marker;
 
 async function getData (){
 
-    const response = await fetch("/TheTrackerApp/data.php");
+    const response = await fetch("/var/www/html/data.php");
     const data = await response.json();
     console.log(data);
     coord={
@@ -17,9 +17,9 @@ async function getData (){
     }
     marker.setPosition(coord)
     map.setCenter(coord)
-    document.getElementById("Latitud").innerText=data.Latitude;
-    document.getElementById("Longitud").innerText=data.Longitude;
-    document.getElementById("Date").innerText=data.Date;
+    document.getElementById("latitud").innerText=data.Latitude;
+    document.getElementById("longitud").innerText=data.Longitude;
+    document.getElementById("date").innerText=data.Date;
 }
 setInterval(getData,3000);
 
