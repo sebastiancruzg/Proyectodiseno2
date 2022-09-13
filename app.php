@@ -11,7 +11,7 @@
 ob_start();
 include("data.php");
 $arr=json_decode(ob_get_clean());
-?>
+?>  
 
 <body>
     <div>
