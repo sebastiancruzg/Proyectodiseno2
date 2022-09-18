@@ -36,4 +36,7 @@ function iniciarMap(){
     });
 
 }
-//prueba
+
+function dos(){
+    
+}
