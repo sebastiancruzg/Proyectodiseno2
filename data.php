@@ -1,7 +1,7 @@
 
 <?php   
 
-$servername = "db-ta";
+$servername = "db-ta.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
 $password = "uwugang64";
 $dbname = "trackerapp";
@@ -18,7 +18,8 @@ $result = $conn->query($sql);
 
 
 if ($result->num_rows > 0) {
-    // output data of each row
+
+  // output data of each row
   $row = $result->fetch_assoc();
 
   $arr = array(

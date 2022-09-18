@@ -8,17 +8,17 @@ var marker;
 
 async function getData (){
 
-    const response = await fetch("/var/www/html/data.php");
+    const response = await fetch("/data.php");
     const data = await response.json();
     console.log(data);
     coord={
         lat:Number(data.Latitude) , 
         lng:Number(data.Longitude)
-    }
+    }       
     marker.setPosition(coord)
     map.setCenter(coord)
-    document.getElementById("latitud").innerText=data.Latitude;
-    document.getElementById("longitud").innerText=data.Longitude;
+    document.getElementById("latitude").innerText=data.Latitude;
+    document.getElementById("longitude").innerText=data.Longitude;
     document.getElementById("date").innerText=data.Date;
 }
 setInterval(getData,3000);
@@ -36,4 +36,4 @@ function iniciarMap(){
     });
 
 }
-
+//prueba

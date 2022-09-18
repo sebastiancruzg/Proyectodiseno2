@@ -24,12 +24,12 @@ $arr=json_decode(ob_get_clean());
     </div>
     
     <div>
-        <h3>Latitude : <span id="Latitud"><?php echo $arr->{"Latitude"}?></span></h3>
+        <h3>Latitude : <span id="Latitude"><?php echo $arr->{"Latitude"}?></span></h3>
 
     </div>
     
     <div>
-        <h3>Longitude : <span id="Longitud"><?php echo $arr->{"Longitude"}?></span> </h3>
+        <h3>Longitude : <span id="Longitude"><?php echo $arr->{"Longitude"}?></span> </h3>
     </div>
 
     <div>
@@ -38,7 +38,7 @@ $arr=json_decode(ob_get_clean());
 
     <div id="map"></div>
 
-<script src="/var/www/html/data.js">
+<script src="/data.js">
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHDHGpcsDEOlqBbnL1BkZlL2Tfpu8XVuM&callback=iniciarMap">    
