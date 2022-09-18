@@ -38,5 +38,5 @@ function iniciarMap(){
 }
 
 function dos(){
-    //prueba
+    //prueba5
 }
