@@ -1,42 +1,41 @@
-var coord = {
-    lat: 0,
-    lng: 0
-};
+const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 
-var map;
-var marker; 
+L.tileLayer(tilesProvider,{
+    maxZoom: 18,
+    attribution: '© OpenStreetMap'
+}).addTo(Map)
+
+var marker = L.marker([0,0])
+var latref=0;
+var longref=0;
 
 async function getData (){
 
-    const response = await fetch("/data.php");
+    
+
+    const response = await fetch("data.php");
     const data = await response.json();
     console.log(data);
-    coord={
-        lat:Number(data.Latitude) , 
-        lng:Number(data.Longitude)
-    }       
-    marker.setPosition(coord)
-    map.setCenter(coord)
-    document.getElementById("latitude").innerText=data.Latitude;
-    document.getElementById("longitude").innerText=data.Longitude;
-    document.getElementById("date").innerText=data.Date;
+
+    marker.setLatLng([data.latitude, data.longitude]).addTo(Map) 
+
+    //Poly
+    if(latref!=0){
+
+        var latlngs = [];
+        latlngs=[[latref,longref],[data.latitude,data.longitude]];   
+        var polyline = L.polyline(latlngs,).addTo(Map)
+
+    }
+
+    document.getElementById("Latitude").innerText=data.latitude;
+    document.getElementById("Longitude").innerText=data.longitude;
+    document.getElementById("Date").innerText=data.date;
+
+    latref=data.latitude;
+    longref=data.longitude;
 }
 setInterval(getData,3000);
 
-function iniciarMap(){
 
-    map = new google.maps.Map(document.getElementById('map'),{
-        zoom: 15,
-        center: coord
-    });
-    
-    marker = new google.maps.Marker({
-        position: coord,
-        map: map
-    });
 
-}
-
-function dos(){
-    //prueba6
-}

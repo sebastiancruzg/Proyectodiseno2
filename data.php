@@ -1,10 +1,9 @@
-
 <?php   
 
-$servername = "db-ta.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
+$servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
-$password = "uwugang64";
-$dbname = "trackerapp";
+$password = "tetris72";
+$dbname = "firts";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,19 +12,18 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM  trackerapp ORDER  BY Date DESC LIMIT  1";  
+$sql = "SELECT * FROM  tabla ORDER  BY Datemy DESC LIMIT  1";  
 $result = $conn->query($sql);
 
 
 if ($result->num_rows > 0) {
-
-  // output data of each row
+    // output data of each row
   $row = $result->fetch_assoc();
 
   $arr = array(
-    'latitude' => $row["Latitud"],
-    'longitude' => $row["Longitud"],
-    'date' => $row["Fecha"]
+    'latitude' => $row["Latitude"],
+    'longitude' => $row["Longitude"],
+    'date' => $row["Datemy"]
   );
   echo json_encode($arr);
   } else {
