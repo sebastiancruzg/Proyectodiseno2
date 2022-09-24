@@ -8,7 +8,7 @@ L.tileLayer(tilesProvider,{
 var marker = L.marker([0,0])
 var latref=0;
 var longref=0;
-//this is try 2
+
 async function getData (){
 
     
