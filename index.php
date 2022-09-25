@@ -42,13 +42,10 @@
             <h3>Date/Hour : <span id="Date"><?php echo $arr->{"date"}?></span></h3>
         </div>
 
-        <input
-            id="party"
-            type="datetime-local"
-            name="partydate"
-            value="2017-06-01T08:30" />
+        <a href="historicos.html">acceder a historicos </a>
 
-        <div id="map" style="height: 500px"></div>
+        <div id="map" style="height: 500px">
+        </div>
 
 	<script type="text/javascript">
 
