@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title> Historicos</title>
+        <title> Historicos </title>
     </head>
+
     <?php   
     ob_start();
     include("data.php");
@@ -26,7 +27,7 @@
             name="partydate"
             value="2017-06-01T08:30" />
 
-            <a href="index.html">main page </a>
+            <a href="index.php">main page </a>
 
         <div id="map" style="height: 500px">
         </div>

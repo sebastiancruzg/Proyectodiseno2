@@ -42,7 +42,7 @@
             <h3>Date/Hour : <span id="Date"><?php echo $arr->{"date"}?></span></h3>
         </div>
 
-        <a href="historicos.html">acceder a historicos </a>
+        <a href="historicos.php">acceder a historicos </a>
 
         <div id="map" style="height: 500px">
         </div>
