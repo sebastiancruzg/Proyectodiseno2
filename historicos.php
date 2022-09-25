@@ -22,12 +22,18 @@
         </div>
 
         <input
-            id="party"
+            id="start"
             type="datetime-local"
             name="partydate"
             value="2017-06-01T08:30" />
 
-            <a href="index.php">main page </a>
+        <input
+            id="end"
+            type="datetime-local"
+            name="partydate"
+            value="2017-06-01T08:30" />
+
+            <a href="index.php"> main page </a>
 
         <div id="map" style="height: 500px">
         </div>
