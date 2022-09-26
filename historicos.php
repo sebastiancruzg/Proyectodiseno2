@@ -22,6 +22,12 @@
     $arr=json_decode(ob_get_clean());
     ?>
 
+    <?php   
+    ob_start();
+    include("historicos.php");
+    ?>
+
+
 <body>
     <div>
         
