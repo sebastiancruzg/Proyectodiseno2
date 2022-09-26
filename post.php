@@ -4,8 +4,8 @@
 $startphp=$_POST['start'];
 $endphp=$_POST['end'];
 
-date_format($startphp, 'Y-m-d H:i:s');
-echo $startphp;
+$startsql=date_format($startphp, 'Y-m-d H:i:s');
+echo json_encode($startsql);
 
 $servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
