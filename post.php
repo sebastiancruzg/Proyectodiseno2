@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql2="SELECT Latitude, Longitude FROM tabla WHERE Datemy between ' " + $startphp + "' and '" + $endphp + "' "
+$sql="SELECT Latitude, Longitude FROM tabla WHERE Datemy between ' " + $startphp + "' and '" + $endphp + "' "
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
