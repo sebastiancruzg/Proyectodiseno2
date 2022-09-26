@@ -10,7 +10,4 @@ form.addEventListener('submit',function(e){
     console.log(datos.get('start'))
     console.log(datos.get('end'))
 
-
-
 })
-passVal();
