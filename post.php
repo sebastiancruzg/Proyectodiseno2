@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql2="SELECT * FROM tabla WHERE Datemy BETWEEN '2022-08-10 00:00:00' AND '2022-10-10 00:00:00' ORDER BY Datemy DESC";     
+$sql2="SELECT Latitude, Longitude FROM tabla WHERE Datemy between ' " + $startphp + "' and '" + $endphp + "' "
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -26,7 +26,6 @@ $row = $result->fetch_assoc();
 $arr = array(
   'latitude' => $row["Latitude"],
   'longitude' => $row["Longitude"],
-  'date' => $row["Datemy"]
 );
 echo json_encode($arr);
 } else {
