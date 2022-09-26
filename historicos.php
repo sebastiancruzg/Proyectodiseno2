@@ -68,7 +68,7 @@
             var start=document.getElementById("start").value;
             var end=document.getElementById("end").value; 
             
-            document.getElementById("demo").innerHTML = start;
+            document.getElementById("demo").innerText=start;
 
         }
     </script>
