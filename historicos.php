@@ -25,7 +25,7 @@
 <body>
     <div>
         
-        <h1>Historicos</h1>
+        <h1>Historicos <?php echo $startphp?></h1>
         
     </div>
 
