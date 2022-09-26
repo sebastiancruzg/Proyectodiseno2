@@ -24,7 +24,7 @@
 
     <?php   
     ob_start();
-    include("historicos.php");
+    include("post.php");
     ?>
 
 
