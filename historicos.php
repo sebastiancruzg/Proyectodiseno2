@@ -42,7 +42,7 @@
             value="2017-06-01T08:30" />
 
         <button onclick="click()">
-        
+
           Click Here!
 
         </button>
@@ -69,7 +69,7 @@
             var end=document.getElementById("end").value; 
             
             document.getElementById(
-                  "demo").innerHTML = x;
+                  "demo").innerHTML = start;
 
         }
     </script>
