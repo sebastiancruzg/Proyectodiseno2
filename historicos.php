@@ -41,24 +41,38 @@
             name="partydate"
             value="2017-06-01T08:30" />
 
+        <button onclick="click()">
+        
+          Click Here!
+
+        </button>
+ 
+        <p id="demo"></p>
+
             <a href="index.php"> main page </a>
 
-        <div>
-
-        <span id="start"></span>
-
-        </div>
 
         <div id="map" style="height: 500px">
         </div>
 
 	<script type="text/javascript">
 
-    var Map = L.map('map'). setView([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>], 13)
-    var marker = L.marker([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>]).addTo(Map)
+        var Map = L.map('map'). setView([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>], 13)
+        var marker = L.marker([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>]).addTo(Map)
     
     </script>
 
+    <script type="text/javascript">
+        function myFunction() {
+
+            var start=document.getElementById("start").value;
+            var end=document.getElementById("end").value; 
+            
+            document.getElementById(
+                  "demo").innerHTML = x;
+
+        }
+    </script>
 
     <script src="/data.js"></script>
     
