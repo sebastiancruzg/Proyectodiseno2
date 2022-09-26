@@ -51,13 +51,10 @@
 
     </form>
 
-    <div>
-        <a href="index.php"> main page </a>
-    </div>
+    <a href="index.php"> main page </a>
 
     <div id="map" style="height: 500px"></div>
 
-    <script src="/data.js"></script>
     <script src="/historicos.js"></script>
 
 </body>
