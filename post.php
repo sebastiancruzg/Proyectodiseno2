@@ -4,9 +4,6 @@
 $startphp=$_POST['start'];
 $endphp=$_POST['end'];
 
-$startsql=date_format($startphp, 'Y-m-d H:i:s');
-echo json_encode($startsql);
-
 $servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
 $password = "tetris72";
@@ -19,8 +16,23 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-  
+$sql2="SELECT * FROM tabla WHERE Datemy BETWEEN '2022-08-10 00:00:00' AND '2022-10-10 00:00:00' ORDER BY Datemy DESC";     
 $result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+$row = $result->fetch_assoc();
+
+$arr = array(
+  'latitude' => $row["Latitude"],
+  'longitude' => $row["Longitude"],
+  'date' => $row["Datemy"]
+);
+echo json_encode($arr);
+} else {
+  echo "0 results";
+}
+$conn->close();
 
 
 ?>

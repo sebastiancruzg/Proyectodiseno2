@@ -18,12 +18,6 @@
 
     <?php   
     ob_start();
-    include("data.php");
-    $arr=json_decode(ob_get_clean());
-    ?>
-
-    <?php   
-    ob_start();
     include("post.php");
     ?>
 
@@ -31,7 +25,7 @@
 <body>
     <div>
         
-        <h1>Historicos <?php echo $starsql?></h1>
+        <h1>Historicos</h1>
         
     </div>
 
