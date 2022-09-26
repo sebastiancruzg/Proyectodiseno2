@@ -63,13 +63,12 @@
     </script>
 
     <script type="text/javascript">
-        function myFunction() {
+        function click() {
 
             var start=document.getElementById("start").value;
             var end=document.getElementById("end").value; 
             
-            document.getElementById(
-                  "demo").innerHTML = start;
+            document.getElementById("demo").innerHTML = start;
 
         }
     </script>
