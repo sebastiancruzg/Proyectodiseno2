@@ -32,13 +32,13 @@
     <form id="form">
     
         <input
-            id="start"
+            name="start"
             type="datetime-local"
             name="partydate"
             value="2017-06-01T08:30" />
 
         <input
-            id="end"
+            name="end"
             type="datetime-local"
             name="partydate"
             value="2017-06-01T08:30" />
