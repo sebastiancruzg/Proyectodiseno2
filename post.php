@@ -17,4 +17,5 @@ $result = $conn->query($sql);
 
 exit(json_encode($result));
 
+$conn->close();
 ?>

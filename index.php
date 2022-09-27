@@ -16,11 +16,11 @@
         <title> Tracker APP</title>
     </head>
 
-    <?php   
-    ob_start();
-    include("data.php");
-    $arr=json_decode(ob_get_clean());
-    ?>
+<?php   
+ob_start();
+include("data.php");
+$arr=json_decode(ob_get_clean());
+?>
 
     <body>
         <div>
