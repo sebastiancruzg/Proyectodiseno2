@@ -29,13 +29,13 @@
             id="start"
             name="start"
             type="datetime-local"
-            datetime="YYYY-MM-DDThh:mm:ssTZD"/>
+            value="2017-06-01T08:30"/>
 
         <input
             id="end"
             name="end"
             type="datetime-local"
-            datetime="YYYY-MM-DDThh:mm:ssTZD"/>
+            value="2017-06-01T08:30"/>
 
         <button type="submit" > Click Here! </button>
 
