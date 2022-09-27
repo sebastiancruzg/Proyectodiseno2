@@ -23,7 +23,7 @@ $.getJSON('post.php', {var1: "start", var2: "start"}, function (data, textStatus
             locations[i] = [lati[i],long[i]];
             }
 
-    Map =L.map('map').setView(locations[0] , 13)
+    Map.setView(locations[0] , 13);
     var polyline = L.polyline(locations).addTo(Map);
 
      
