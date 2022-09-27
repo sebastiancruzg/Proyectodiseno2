@@ -15,7 +15,13 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM  tabla ORDER  BY Datemy DESC LIMIT  1"; 
 $result = $conn->query($sql);
 
-exit(json_encode($result));
+if ($result->num_rows > 0) {
+    // output data of each row
+$row = $result->fetch_assoc();
+
+echo json_encode($arr);
 
 $conn->close();
+}
+
 ?>
