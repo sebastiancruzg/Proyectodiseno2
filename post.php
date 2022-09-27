@@ -1,8 +1,6 @@
 <?php   
 
-$startphp = $_GET['start'];
-
-$endphp = $_GET['end'];
+echo "dasjkfkjasdkjfkas";
 
 $servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
