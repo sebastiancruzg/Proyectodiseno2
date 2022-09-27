@@ -16,7 +16,7 @@ $sql = "SELECT Latitude, Longitude FROM tabla  WHERE Datemy >= '2022-09-26 22:56
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  $row = $result->fetch_assoc();
+  $row = mysqli_fetch_all($sql, MYSQLI_ASSOC);
   echo json_encode($row);
   } else {
     echo "0 results";
