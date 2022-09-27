@@ -11,11 +11,6 @@
         <title> Historicos </title>
     </head>
 
-    <?php   
-    ob_start();
-    include("post.php");
-    ?>
-
 <body>
     <div>
         
@@ -23,8 +18,6 @@
         
     </div>
 
-    <form id="form">
-    
         <input
             id="start"
             name="start"
@@ -38,8 +31,6 @@
             value="2022-09-28T08:30"/>
 
         <button type="submit" > Click Here! </button>
-
-    </form>
 
     <a href="index.php"> main page </a>
 
