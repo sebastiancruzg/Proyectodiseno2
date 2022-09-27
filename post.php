@@ -12,14 +12,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM  tabla ORDER  BY Datemy ";  
+$sql = "SELECT * FROM  tabla ORDER  BY Datemy DESC LIMIT  1";  
 $result = $conn->query($sql);
 
 
 if ($result->num_rows > 0) {
-    // output data of each row
   $row = $result->fetch_assoc();
-  echo json_encode($row);
+  echo json_encode($result);
   } else {
     echo "0 results";
   }
