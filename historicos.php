@@ -11,11 +11,6 @@
         <title> Historicos </title>
 </head>
 
-<?php   
-ob_start();
-include("post.php");
-?>
-
 <body>
     <div>
         
