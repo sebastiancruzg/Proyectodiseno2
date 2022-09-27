@@ -44,7 +44,6 @@
 
     <a href="index.php"> main page </a>
 
-    <script src="/historicos.js"></script>
 
 </body>
 
