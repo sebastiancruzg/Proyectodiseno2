@@ -12,7 +12,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT Latitude, Longitude FROM tabla  WHERE Datemy >= '2022-09-26 22:56' AND Datemy <= ' 2022-09-27 00:16' ";  
+$sql = "SELECT Latitude, Longitude FROM tabla  WHERE Datemy >= '2022-09-26 22:56' AND Datemy <= '2022-09-27 00:16' ";  
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
