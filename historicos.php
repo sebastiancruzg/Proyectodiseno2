@@ -20,14 +20,16 @@
         
     </div>
 
-    <form method="get" target="blank" name="form" action="post.php">
+    <form id="form">
     
         <input
+            id="start"
             name="start"
             type="datetime-local"
             datetime="YYYY-MM-DDThh:mm:ssTZD"/>
 
         <input
+            id="end"
             name="end"
             type="datetime-local"
             datetime="YYYY-MM-DDThh:mm:ssTZD"/>
