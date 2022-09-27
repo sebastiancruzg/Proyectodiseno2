@@ -1,6 +1,6 @@
 function getInfo(){
 
-$.getJSON('post.php', {var1: defdefdate1, var2: defdefdate2}, function (data, textStatus, jqXHR) {
+$.getJSON('post.php', {var1: "2022-09-26 22:56:21", var2: "2022-09-29 00:39:00"}, function (data, textStatus, jqXHR) {
     
     console.log(data);
 

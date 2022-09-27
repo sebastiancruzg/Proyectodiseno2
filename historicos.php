@@ -25,13 +25,13 @@
             id="start"
             name="start"
             type="datetime-local"
-            value="2022-09-24T08:30"/>
+            value="2022-09-26T22:56:21"/>
 
         <input
             id="end"
             name="end"
             type="datetime-local"
-            value="2022-09-28T08:30"/>
+            value="2022-09-29T00:39:00"/>
 
         <button onclick="getInfo()" > Click Here! </button>
 
