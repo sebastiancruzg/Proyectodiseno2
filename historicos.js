@@ -5,7 +5,7 @@ form.addEventListener('submit',function(e){
     console.log('click')
     var datos= new FormData(form);
     
-    console.log(datos.get('start'))
-    console.log(datos.get('end'))
+    console.log(document.getElementById('start').value);
+    console.log(document.getElementById('end').value);
 
 })
