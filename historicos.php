@@ -18,6 +18,8 @@
 
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
         <title> Historicos </title>
 </head>
 
@@ -45,6 +47,26 @@
     <a href="index.php"> main page </a>
 
     <div id="map" style="height: 500px"></div>
+
+    <script type="text/javascript">
+
+    var star= document.getElementById('start').value;
+    var en= document.getElementById('start').value;
+    var start=star.replace('T',' ');
+    var end=en.replace('T',' ');
+
+    $.ajax({
+        url: 'post.php',
+        type: 'post'
+        data:{
+            start: start;
+            end: end;
+        }
+    }).done(function (res)){
+        data = JSON.parse(res);
+    }
+    
+    </script>
 
     <script src="/historicos.js"></script>
 
