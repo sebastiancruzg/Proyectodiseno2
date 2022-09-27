@@ -5,7 +5,11 @@ form.addEventListener('submit',function(e){
     console.log('click')
     var datos= new FormData(form);
     
-    console.log(document.getElementById('start'));
-    console.log(document.getElementById('end'));
+    var star= document.getElementById('start').value;
+    var start=star.replace('T','');
+    var en= document.getElementById('start').value;
+    var end=en.replace('T','');
 
+    console.log(end);
+    console.log(start);
 })
