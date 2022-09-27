@@ -10,7 +10,7 @@ form.addEventListener('submit',function(e){
     var en= document.getElementById('end').value;
     var end=en.replace('T',' ');
 
-    console.log(star);
+    console.log(start);
     console.log(end);
 
 
