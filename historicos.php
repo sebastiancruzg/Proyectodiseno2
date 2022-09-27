@@ -20,7 +20,6 @@
         
     </div>
     
-
         <input
             id="start"
             name="start"
