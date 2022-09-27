@@ -19,12 +19,6 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
   $row = $result->fetch_assoc();
-
-  $arr = array(
-    'latitude' => $row["Latitude"],
-    'longitude' => $row["Longitude"],
-    'date' => $row["Datemy"]
-  );
   echo json_encode($row);
   } else {
     echo "0 results";
