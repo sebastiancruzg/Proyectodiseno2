@@ -1,5 +1,7 @@
 <?php   
 
+
+
 $servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
 $password = "tetris72";
