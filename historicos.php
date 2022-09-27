@@ -20,7 +20,7 @@
         
     </div>
 
-    <form method="get" name="form" action="post.php">
+    <form method="get" target="blank" name="form" action="post.php">
     
         <input
             name="start"
@@ -30,14 +30,9 @@
         <input
             name="end"
             type="datetime-local"
-            datetime="YYYY-MM-DDThh:mm:ssTZD"
-            />
+            datetime="YYYY-MM-DDThh:mm:ssTZD"/>
 
-        <button type="submit">
-
-          Click Here!
-
-        </button>
+        <button type="submit" > Click Here! </button>
 
     </form>
 
