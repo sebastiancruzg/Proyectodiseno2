@@ -11,6 +11,12 @@
         <title> Historicos </title>
     </head>
 
+    <?php   
+    ob_start();
+    include("post.php");
+    $result=json_decode(ob_get_clean());
+    ?>
+
 <body>
     <div>
         
