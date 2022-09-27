@@ -7,9 +7,11 @@ form.addEventListener('submit',function(e){
     
     var star= document.getElementById('start').value;
     var start=star.replace('T',' ');
-    var en= document.getElementById('start').value;
+    var en= document.getElementById('end').value;
     var end=en.replace('T',' ');
 
     console.log(end);
     console.log(start);
+
+    
 })
