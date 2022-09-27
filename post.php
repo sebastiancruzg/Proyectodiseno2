@@ -16,6 +16,6 @@ $sql = "SELECT Latitude, Longitude FROM tabla WHERE Datemy >= '2022-09-26 22:56:
 AND Datemy <= '2022-09-29 00:39:00' ";  
 $result = $conn->query($sql);
 
-echo json_encode($result);
-$conn->close();
+exit(json_encode($result));
+
 ?>

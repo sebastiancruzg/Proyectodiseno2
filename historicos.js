@@ -1,18 +1,30 @@
-var form = document.getElementById('form');
+function getInfo(){
 
-form.addEventListener('submit',function(e){
-    e.preventDefault();
-    console.log('click')
-    var datos= new FormData(form);
+$.getJSON('post.php', {var1: defdefdate1, var2: defdefdate2}, function (data, textStatus, jqXHR) {
     
-    var star= document.getElementById('start').value;
-    var en= document.getElementById('end').value;
-    
-    var start=star.replace('T',' ');
-    var end=en.replace('T',' ');
+    console.log(data);
 
-    console.log(start);
-    console.log(end);
+    let latgot = data.map(a => a.latitud);
+    let longot = data.map(a => a.longitud);
+
+    latgot = latgot.map(e => parseFloat(e));
+    longot = longot.map(e => parseFloat(e));
 
 
-})
+    var gotlocations = []
+    for (var i = 0; i < latgot.length; i++) {
+    gotlocations[i] = [latgot[i],longot[i]];
+    }
+
+    if (!gotlocations.length){
+        document.getElementById("noresults").showModal();
+        
+    }
+    else{
+        clearmap()
+        polyline2 = L.polyline(gotlocations, {color: 'blue'}).addTo(map);
+        map.setView(gotlocations[0], 15);
+    }
+});
+
+}

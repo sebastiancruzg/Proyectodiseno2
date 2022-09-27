@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <html lang="en">
-    <head> 
+<head> 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
         <title> Historicos </title>
-    </head>
+</head>
 
-    <?php   
-    ob_start();
-    include("post.php");
-    $result=json_decode(ob_get_clean());
-    ?>
+<?php   
+ob_start();
+include("post.php");
+$result=json_decode(ob_get_clean());
+?>
 
 <body>
     <div>
@@ -23,6 +23,7 @@
         <h1>Historicos</h1>
         
     </div>
+    
 
         <input
             id="start"
@@ -36,12 +37,13 @@
             type="datetime-local"
             value="2022-09-28T08:30"/>
 
-        <button type="submit" > Click Here! </button>
+        <button onclick="getInfo()" > Click Here! </button>
 
     <a href="index.php"> main page </a>
 
     <script src="/historicos.js"></script>
 
+    
 </body>
 
 
