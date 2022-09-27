@@ -10,6 +10,9 @@ $.getJSON('post.php', {var1: "start", var2: "start"}, function (data, textStatus
     var lati = data.map(a => a.latitude);
     var long = data.map(a => a.longitude);
 
+    latgot = latgot.map(e => parseFloat(e));
+    longot = longot.map(e => parseFloat(e))
+
     console.log(lati);
     console.log(long);
     
