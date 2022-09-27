@@ -1,9 +1,9 @@
 <?php   
 
 $startphp = $_GET['start'];
-echo $startphp
+echo $startphp;
 $endphp = $_GET['end'];
-echo $endphp
+echo $endphp;
 
 $servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
@@ -21,6 +21,6 @@ $sql = "SELECT Latitude, Longitude FROM tabla WHERE Datemy between ' " +
 $startphp + "' and '" + $endphp + "' ";  
 $result = $conn->query($sql);
 
-echo $result
+echo $result;
 
 ?>
