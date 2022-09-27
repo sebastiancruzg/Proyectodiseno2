@@ -1,6 +1,6 @@
 const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 
-var Map = L.map('map'). setView([0,0] , 13);
+var Map = L.map('map'). setView([9.254466, -73.812844] , 7);
 
 L.tileLayer(tilesProvider,{
     maxZoom: 18,
@@ -26,8 +26,6 @@ $.getJSON('post.php', {var1: "start", var2: "start"}, function (data, textStatus
     Map.setView(locations[0] , 13);
     var polyline = L.polyline(locations).addTo(Map);
 
-     
-    
 });
 
 }
