@@ -1,6 +1,7 @@
 <?php   
 
-
+$startphp = $_POST['start'];
+$endphp = $_POST['end'];
 
 $servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
@@ -14,8 +15,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = mysqli_query($conn,"SELECT Latitude, Longitude FROM tabla  WHERE Datemy >= '2022-09-26 22:56' AND Datemy 
-<= '2022-09-27 00:16' ");  
+$sql = mysqli_query($conn,"SELECT Latitude, Longitude FROM tabla  WHERE Datemy >= '$startphp' AND Datemy 
+<= '$endphp' ");  
 $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
 
 exit(json_encode($result));
