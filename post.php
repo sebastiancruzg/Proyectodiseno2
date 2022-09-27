@@ -2,6 +2,8 @@
 
 $startphp = $_POST['start'];
 $endphp = $_POST['end'];
+echo $startphp;
+echo $endphp;
 
 $servername = "database-1.cgvkojo0ntbn.us-east-1.rds.amazonaws.com";
 $username = "std";
