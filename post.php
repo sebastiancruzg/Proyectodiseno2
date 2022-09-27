@@ -12,7 +12,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM  tabla ORDER  BY Datemy DESC LIMIT  1";  
+$sql = "SELECT * FROM  tabla ORDER  BY Datemy ";  
 $result = $conn->query($sql);
 
 
