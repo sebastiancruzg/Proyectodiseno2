@@ -20,7 +20,7 @@
         
     </div>
 
-    <form id="form">
+    <form method="get" name="form" action="post.php">
     
         <input
             name="start"
