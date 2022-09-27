@@ -25,14 +25,13 @@
         <input
             name="start"
             type="datetime-local"
-            name="partydate"
-            value="2017-06-01T08:30" />
+            datetime="YYYY-MM-DDThh:mm:ssTZD"/>
 
         <input
             name="end"
             type="datetime-local"
-            name="partydate"
-            value="2017-06-01T08:30" />
+            datetime="YYYY-MM-DDThh:mm:ssTZD"
+            />
 
         <button type="submit">
 
@@ -44,6 +43,7 @@
 
     <a href="index.php"> main page </a>
 
+    <script src="/historicos.js"></script>
 
 </body>
 
