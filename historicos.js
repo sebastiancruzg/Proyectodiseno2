@@ -1,6 +1,6 @@
 const tilesProvider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 
-var Map = L.map('map'). setView([9.254466, -73.812844] , 8);
+var Map = L.map('map'). setView([10.494963, -75.131142] , 9);
 
 L.tileLayer(tilesProvider,{
     maxZoom: 18,
