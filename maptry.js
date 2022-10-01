@@ -14,6 +14,7 @@ Map.on('click', function(e) {
     marker.remove(Map);
 
     marker.setLatLng(e.latlng).addTo(Map);
+    console.log(e.latlng);
 
 });
 
