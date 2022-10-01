@@ -29,6 +29,7 @@
     </div>
     
         <input
+            onchange="saveStart()"
             id="start"
             name="start"
             type="datetime-local"
