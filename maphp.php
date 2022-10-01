@@ -21,7 +21,7 @@ cos(radians('$endphp') - radians(-74.85114097595216)) +
 sin(radians(11.01668325889961)) * sin(radians('$startphp')))) 
 AS distance 
 FROM tabla 
-HAVING distance < 5 ORDER BY distance");
+HAVING distance < 3 ORDER BY distance");
 
 $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
 
