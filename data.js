@@ -15,8 +15,7 @@ async function getData (){
 
     const response = await fetch("data.php");
     const data = await response.json();
-    console.log(data);
-
+    
     marker.setLatLng([data.latitude, data.longitude]).addTo(Map) 
 
     //Poly
