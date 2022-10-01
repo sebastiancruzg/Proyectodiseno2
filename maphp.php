@@ -24,7 +24,7 @@ Datemy,
    sin(radians(Latitude)))
 ) AS distance 
 FROM tabla 
-HAVING distance < 28 
+HAVING distance < 50 
 ORDER BY distance LIMIT 0, 20");
 
 $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
