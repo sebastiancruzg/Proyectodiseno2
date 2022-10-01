@@ -12,20 +12,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = mysqli_query($conn,"SELECT 
-Datemy, 
-(
-   6371 *
-   acos(cos(radians(37)) * 
-   cos(radians(Latitude)) * 
-   cos(radians(Longitude) - 
-   radians(-74.850)) + 
-   sin(radians( 11.01)) * 
-   sin(radians(Latitude)))
-) AS distance 
+$sql = mysqli_query($conn,"SELECT Datemy, 
+( 6371 * acos(cos(radians(11.01668325889961)) * cos(radians(Latitude)) * 
+cos(radians(Longitude) - radians(-74.85114097595216)) + 
+sin(radians(11.01668325889961)) * sin(radians(Latitude)))) 
+AS distance 
 FROM tabla 
-HAVING distance < 50 
-ORDER BY distance LIMIT 0, 20");
+HAVING distance < 70 ORDER BY distance");
 
 $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
 
