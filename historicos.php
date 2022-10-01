@@ -48,26 +48,6 @@
 
     <div id="map" style="height: 500px"></div>
 
-    <script type="text/javascript">
-
-    var star= document.getElementById('start').value;
-    var en= document.getElementById('start').value;
-    var start=star.replace('T',' ');
-    var end=en.replace('T',' ');
-
-    $.ajax({
-        url: 'post.php',
-        type: 'post'
-        data:{
-            start: start;
-            end: end;
-        }
-    }).done(function (res)){
-        data = JSON.parse(res);
-    }
-    
-    </script>
-
     <script src="/historicos.js"></script>
 
     

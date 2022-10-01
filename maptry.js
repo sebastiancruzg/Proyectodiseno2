@@ -7,9 +7,14 @@ L.tileLayer(tilesProvider,{
     attribution: '© OpenStreetMap'
 }).addTo(Map)
 
+var i=0;
 Map.on('click', function(e) {
+    if (i!=0){
+        
+    }
     var marker = L.marker(e.latlng).addTo(Map) 
     console.log(e.latlng)
+
 });
 
 
