@@ -19,10 +19,11 @@ Map.on('click', function(e) {
     var lat= e.latlng.lat;
     var lng= e.latlng.lng;
 
-    console.log(lat);
-    console.log(lng);
+    $.getJSON('maphp.php', {var1: lat, var2: lng}, function (data, textStatus, jqXHR) {
     
-
+        console.log(data);
+    
+    });
 
 });
 
