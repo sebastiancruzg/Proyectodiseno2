@@ -20,7 +20,7 @@ cos(radians(Longitude) - radians('$lngphp')) +
 sin(radians('$latphp')) * sin(radians(Latitude)))) 
 AS distance 
 FROM tabla 
-HAVING distance < 70 ORDER BY distance");
+HAVING distance < 1 ORDER BY distance");
 
 $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
 
