@@ -8,6 +8,7 @@ L.tileLayer(tilesProvider,{
 }).addTo(Map)
 
 function getInfo(){
+    
     var star= document.getElementById('start').value;
     var en= document.getElementById('end').value;
     var start=star.replace('T',' ');
