@@ -8,9 +8,10 @@ L.tileLayer(tilesProvider,{
 }).addTo(Map)
 
 var i=0;
+
 Map.on('click', function(e) {
     if (i!=0){
-        
+        marker.remove(Map);
     }
     var marker = L.marker(e.latlng).addTo(Map) 
     console.log(e.latlng)

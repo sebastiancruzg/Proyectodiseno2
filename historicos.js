@@ -14,7 +14,6 @@ function getInfo(){
     
     if (i>0){
         polylines.remove(Map);
-        console.log(i);
     }
 
     var star= document.getElementById('start').value;
