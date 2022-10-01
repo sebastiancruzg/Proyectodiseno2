@@ -16,5 +16,13 @@ Map.on('click', function(e) {
     marker.setLatLng(e.latlng).addTo(Map);
     console.log(e.latlng);
 
+    var lat= e.latlng.lat;
+    var lng= e.latlng.lng;
+
+    console.log(lat);
+    console.log(lng);
+    
+
+
 });
 
