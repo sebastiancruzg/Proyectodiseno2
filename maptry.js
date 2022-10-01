@@ -8,13 +8,16 @@ L.tileLayer(tilesProvider,{
 }).addTo(Map)
 
 
+var marker;
 
 Map.on('click', function(e) {
 
-    var marker = L.marker(e.latlng).addTo(Map) 
-    console.log(e.latlng)
-
     marker.remove(Map);
+
+    marker.setLatLng(e.latlng).addTo(Map);
+    console.log(e.latlng);
+
+    
 
 });
 
