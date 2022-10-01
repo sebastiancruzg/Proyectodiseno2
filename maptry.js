@@ -7,7 +7,7 @@ L.tileLayer(tilesProvider,{
     attribution: '© OpenStreetMap'
 }).addTo(Map)
 
-map.on('click', function(e) {
+Map.on('click', function(e) {
     alert(e.latlng);
 });
 
