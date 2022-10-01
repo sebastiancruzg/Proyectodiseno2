@@ -10,15 +10,12 @@ L.tileLayer(tilesProvider,{
 
 
 Map.on('click', function(e) {
-    var i=0;
-    
-    if (i!=0){
-        marker.remove(Map);
-    }
+
     var marker = L.marker(e.latlng).addTo(Map) 
     console.log(e.latlng)
-    
-    i=1;
+
+    marker.remove(Map);
+
 });
 
 
