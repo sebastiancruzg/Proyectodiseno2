@@ -8,7 +8,7 @@ L.tileLayer(tilesProvider,{
 }).addTo(Map)
 
 
-var marker;
+var marker=L.marker([0,0]);
 
 Map.on('click', function(e) {
 
