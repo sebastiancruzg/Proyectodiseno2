@@ -7,16 +7,29 @@ L.tileLayer(tilesProvider,{
     attribution: '© OpenStreetMap'
 }).addTo(Map)
 
+var i=0;
+var polylines;
+
 function getInfo(){
     
+    if (i>0){
+        polylines.remove(Map);
+        console.log(i);
+    }
+
     var star= document.getElementById('start').value;
     var en= document.getElementById('end').value;
     var start=star.replace('T',' ');
     var end=en.replace('T',' ');
 
+    document.getElementById('end').min=star;
+
+    console.log(start);
+    console.log(end);
+
+    i=1;
 $.getJSON('post.php', {var1: start, var2: end}, function (data, textStatus, jqXHR) {
     
-    console.log(data);
     var lati = data.map(a => a.Latitude);
     var long = data.map(a => a.Longitude);
 
@@ -25,8 +38,8 @@ $.getJSON('post.php', {var1: start, var2: end}, function (data, textStatus, jqXH
             locations[i] = [lati[i],long[i]];
             }
 
-    Map.setView(locations[0] , 13);
-    var polyline = L.polyline(locations).addTo(Map);
+    Map.setView(locations[0]);
+    polylines = L.polyline(locations).addTo(Map);
 
 });
 
