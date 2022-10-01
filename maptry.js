@@ -8,7 +8,8 @@ L.tileLayer(tilesProvider,{
 }).addTo(Map)
 
 Map.on('click', function(e) {
-    alert(e.latlng);
+    marker.setLatLng(e.latlng).addTo(Map) 
+    console.log(e.latlng)
 });
 
 
