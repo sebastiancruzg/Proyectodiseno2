@@ -13,17 +13,18 @@ var marker=L.marker([0,0]);
 
 Map.on('click', function(e) {
     var radius = e.accuracy / 2;
-
+    console.log(e.accuracy);
     marker.remove(Map);
 
     marker.setLatLng(e.latlng).addTo(Map);
+
     L.circle(e.latlng, radius,
         {
           color: 'red',
           fillColor: '#f03',
           fillOpacity: 0.5,
           radius: 400
-        }).addTo(map);
+        }).addTo(Map);
     console.log(e.latlng);
 
 });
