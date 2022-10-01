@@ -19,8 +19,8 @@ Datemy,
    acos(cos(radians(37)) * 
    cos(radians(Latitude)) * 
    cos(radians(Longitude) - 
-   radians(-74.8506796360016)) + 
-   sin(radians( 11.017298012421954)) * 
+   radians(-74.850)) + 
+   sin(radians( 11.01)) * 
    sin(radians(Latitude)))
 ) AS distance 
 FROM tabla 
