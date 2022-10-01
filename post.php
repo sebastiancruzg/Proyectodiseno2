@@ -1,7 +1,7 @@
 <?php   
 
-$startphp = $_POST['start'];
-$endphp = $_POST['end'];
+$startphp = $_POST['var1'];
+$endphp = $_POST['var2'];
 echo $startphp;
 echo $endphp;
 
@@ -17,8 +17,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = mysqli_query($conn,"SELECT Latitude, Longitude FROM tabla  WHERE Datemy >= $startphp AND Datemy 
-<= $endphp ");  
+$sql = mysqli_query($conn,"SELECT Latitude, Longitude FROM tabla  WHERE Datemy >= '$startphp' AND Datemy 
+<= '$endphp' ");  
 $result = mysqli_fetch_all($sql, MYSQLI_ASSOC);
 
 exit(json_encode($result));
