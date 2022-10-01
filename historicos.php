@@ -33,6 +33,7 @@
             id="start"
             name="start"
             type="datetime-local"
+            value="2022-09-26T22:56"
             min="2022-09-26T22:56"/>
 
         <input
