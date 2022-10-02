@@ -179,6 +179,7 @@ h1,h2,h3 {
     color: var(--blanco);
     padding: 0.15rem 3rem;
     margin-top: 6rem;
+    margin-bottom: 2rem;
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -213,6 +214,7 @@ h1,h2,h3 {
     color: var(--blanco);
     padding: 0.15rem 3rem;
     margin-top: 6rem;
+    margin-bottom: 2rem;
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -235,4 +237,27 @@ h1,h2,h3 {
 .calendar{
     text-align: center;
     margin-bottom: 50px;
+}
+
+.buscar {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    width: 35%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+    border: none;
+    padding: 0.15rem 3rem;
+    
+}
+
+@media (min-width: 768px) {
+    .buscar {
+        width: auto;
+    }
+}
+.buscar:hover {
+    cursor: pointer;
 }
