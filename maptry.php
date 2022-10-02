@@ -32,7 +32,6 @@
 
     <div id="map" style="height: 500px"></div>
 
-
     <script src="/maptry.js"></script>
 
     

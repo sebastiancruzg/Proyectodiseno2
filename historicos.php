@@ -49,6 +49,8 @@
 
     <script src="/historicos.js"></script>
 
+    <script src="/maptry.js"></script>
+
     
 </body>
 
