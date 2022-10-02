@@ -49,6 +49,35 @@
     </section>
 
     <main class="contenedor sombra">
+
+        <div>
+        
+            <h3>Latitude : <span id="Latitude"><?php echo $arr->{"latitude"}?></span></h3>
+
+        </div>
+        
+        <div>
+            <h3>Longitude : <span id="Longitude"><?php echo $arr->{"longitude"}?></span> </h3>
+        </div>
+
+        <div>
+            <h3>Date/Hour : <span id="Date"><?php echo $arr->{"date"}?></span></h3>
+        </div>
+         
+        <div>
+            <a class="historicos" href="historicos.php">Acceder a historicos</a>
+        </div>
+        
+
+        <div id="map" style="height: 500px"></div>
+
+	<script type="text/javascript">
+
+    var Map = L.map('map'). setView([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>], 13)
+    var marker = L.marker([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>]).addTo(Map)
+    
+    </script>
+    
         <h2>Nuestros Servicios</h2>
 
         <div class="servicios">
@@ -105,32 +134,7 @@
             </section>
         </div> <!--.servicios-->
     
-        <div>
-            <h3>Latitude : <span id="Latitude"><?php echo $arr->{"latitude"}?></span></h3>
 
-        </div>
-        
-        <div>
-            <h3>Longitude : <span id="Longitude"><?php echo $arr->{"longitude"}?></span> </h3>
-        </div>
-
-        <div>
-            <h3>Date/Hour : <span id="Date"><?php echo $arr->{"date"}?></span></h3>
-        </div>
-         
-        <div>
-            <a class="historicos" href="historicos.php">Acceder a historicos</a>
-        </div>
-        
-
-        <div id="map" style="height: 500px"></div>
-
-	<script type="text/javascript">
-
-    var Map = L.map('map'). setView([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>], 13)
-    var marker = L.marker([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>]).addTo(Map)
-    
-    </script>
 
 
     <script src="/data.js"></script>
