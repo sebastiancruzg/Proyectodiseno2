@@ -26,9 +26,15 @@
     $arr=json_decode(ob_get_clean());
     ?>
 
+    <?php   
+    ob_start();
+    include("data2.php");
+    $arr2=json_decode(ob_get_clean());
+    ?>
+
 <body>
     <div class="header">
-        <img class="logo" src="/img/logo4.png" alt="Logo">
+        
         <h1 class="titulo"> Hugin tracker </h1>
         
     </div>
@@ -44,11 +50,15 @@
                 </svg>
                 <p>Barranquilla, Atlántico</p>
             </div>
-            <a class="boton" href="#">Contactar</a>
+            
         </div> <!-- .contenido-hero --> 
     </section>
 
     <main class="contenedor sombra">
+
+        <div>
+            <h3>Vehículo 1</h3>
+        </div>
 
         <div>
         
@@ -63,9 +73,31 @@
         <div>
             <h3>Date/Hour : <span id="Date"><?php echo $arr->{"date"}?></span></h3>
         </div>
+
+        <div>
+            <h3>Vehículo 2</h3>
+        </div>
+
+        <div>
+        
+            <h3>Latitude : <span id="Latitude2"><?php echo $arr2->{"latitude"}?></span></h3>
+
+        </div>
+        
+        <div>
+            <h3>Longitude : <span id="Longitude2"><?php echo $arr2->{"longitude"}?></span> </h3>
+        </div>
+
+        <div>
+            <h3>Date/Hour : <span id="Date2"><?php echo $arr2->{"date"}?></span></h3>
+        </div>
          
         <div>
-            <a class="historicos" href="historicos.php">Acceder a historicos</a>
+            <a class="historicos" href="historicos.php">Historicos Vehículo 1</a>
+        </div>
+
+        <div>
+            <a class="historicos" href="historicos2.php">Historicos Vehículo 2</a>
         </div>
         
 
@@ -75,6 +107,11 @@
 
     var Map = L.map('map'). setView([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>], 13)
     var marker = L.marker([<?php echo $arr->{"latitude"}?>, <?php echo $arr->{"longitude"}?>]).addTo(Map)
+
+    
+    var marker2 = L.marker([<?php echo $arr2->{"latitude"}?>, <?php echo $arr2->{"longitude"}?>]).addTo(Map)
+
+    
     
     </script>
     
@@ -138,6 +175,7 @@
 
 
     <script src="/data.js"></script>
+    <script src="/data2.js"></script>
     
     </body>
 
