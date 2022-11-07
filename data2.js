@@ -4,7 +4,7 @@ L.tileLayer(tilesProvider,{
     attribution: '© OpenStreetMap'
 }).addTo(Map)
 
-var marker = L.marker([0,0])
+var marker2 = L.marker([0,0])
 var latref2=0;
 var longref2=0;
 async function getData (){
@@ -15,14 +15,14 @@ async function getData (){
     const data = await response.json();
     console.log(data);
 
-    marker.setLatLng([data.latitude, data.longitude]).addTo(Map) 
+    marker2.setLatLng([data.latitude, data.longitude]).addTo(Map) 
 
     //Poly
     if(latref2!=0){
 
         var latlngs2 = [];
         latlngs2=[[latref2,longref2],[data.latitude,data.longitude]];   
-        var polyline = L.polyline(latlngs2,).addTo(Map)
+        var polyline = L.polyline(latlngs2,{color: 'orange'}).addTo(Map)
 
     }
 

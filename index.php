@@ -38,6 +38,13 @@
         <h1 class="titulo"> Hugin tracker </h1>
         
     </div>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.php">Recorrido en tiempo real</a>
+            <a href="historicos.php">Recorrido historico</a>
+        </nav>
+    </div>
         
     <section class="hero">
         <div class="contenido-hero">
@@ -92,13 +99,9 @@
             <h3>Date/Hour : <span id="Date2"><?php echo $arr2->{"date"}?></span></h3>
         </div>
          
-        <div>
-            <a class="historicos" href="historicos.php">Historicos Vehículo 1</a>
-        </div>
+       
 
-        <div>
-            <a class="historicos" href="historicos2.php">Historicos Vehículo 2</a>
-        </div>
+       
         
 
         <div id="map" style="height: 500px"></div>

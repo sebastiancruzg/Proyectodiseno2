@@ -36,22 +36,28 @@
         
     </div>
 
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.php">Recorrido en tiempo real</a>
+            <a href="historicos.php">Recorrido historico</a>
+        </nav>
+    </div>
+
 <main class="contenedor sombra">
     
         <div>
             <h3>Seleccione las fechas que desea consultar</h3>
             <div class="calendar">
-                <input onchange="saveStart()" id="start" name="start" type="datetime-local" value="2022-09-26T22:56" min="2022-09-26T22:56"/>
+                <input onchange="saveStart()" id="start" name="start" type="datetime-local"  min="2022-09-26T22:56"/>
                 <input id="end" name="end" type="datetime-local"/>
                 <button class="buscar" onclick="getInfo()">Buscar</button>
+                <button class="buscar" onclick="delet()">Limpiar Vehículo 1</button>
+                <button class="buscar" onclick="delet2()">Limpiar Vehículo 2</button>
             </div>
         </div>
 
-    
 
-    <div>
-        <a class="pagina" href="index.php"> Página principal</a>
-    </div>
+        
     
   
     <div id="map" style="height: 500px"></div>

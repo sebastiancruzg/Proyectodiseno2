@@ -9,6 +9,7 @@ L.tileLayer(tilesProvider,{
 
 var i=0;
 var polylines;
+var polylines2;
 
 function saveStart(){
     
@@ -33,6 +34,8 @@ function getInfo(){
     console.log(end);
 
     i=1;
+
+
     
 $.getJSON('post.php', {var1: start, var2: end}, function (data, textStatus, jqXHR) {
     
@@ -49,4 +52,37 @@ $.getJSON('post.php', {var1: start, var2: end}, function (data, textStatus, jqXH
 
 });
 
+$.getJSON('post2.php', {var1: start, var2: end}, function (data, textStatus, jqXHR) {
+    
+    var lati = data.map(a => a.Latitude);
+    var long = data.map(a => a.Longitude);
+
+    var locations2 = []
+            for (var i = 0; i < lati.length; i++) {
+            locations2[i] = [lati[i],long[i]];
+            }
+
+    Map.setView(locations2[0]);
+    polylines2 = L.polyline(locations2,{color: 'orange'}).addTo(Map);
+
+});
+
+
+}
+
+function delet() {
+    if(Map.hasLayer(polylines)){
+        Map.removeLayer(polylines);
+    } else {
+        Map.addLayer(polylines);
+    }
+    
+}
+
+function delet2() {
+    if(Map.hasLayer(polylines2)){
+        Map.removeLayer(polylines2);
+    } else {
+        Map.addLayer(polylines2);
+    }
 }
